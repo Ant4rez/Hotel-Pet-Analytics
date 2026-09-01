@@ -1,4 +1,4 @@
-# 🐾 Pet Hotel Analytics & ML Platform
+# Pet Hotel Analytics & ML Platform
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Em%20Evolu%C3%A7%C3%A3o%20Ativa-success?style=for-the-badge&logo=git" alt="Status">
@@ -14,50 +14,50 @@
 
 ---
 
-## 📌 Sumário
-* [📖 Sobre o Projeto](#-sobre-o-projeto)
-* [🌱 Origem & Evolução: Da Sala de Aula ao Mundo Real](#-origem--evolu%C3%A7%C3%A3o-da-sala-de-aula-ao-mundo-real)
-* [🏛️ Arquitetura de Dados de Ponta a Ponta](#️-arquitetura-de-dados-de-ponta-a-ponta)
-* [📊 Estado Atual vs. Visão Futura](#-estado-atual-vs-vis%C3%A3o-futura)
-* [🏅 Arquitetura Medallion no Databricks](#-arquitetura-medallion-no-databricks)
-* [🤖 Ciência de Dados & Machine Learning](#-ci%C3%AAncia-de-dados--machine-learning)
-* [🛡️ Governança & Data Quality](#️-governan%C3%A7a--data-quality)
-* [🗺️ Roadmap de Desenvolvimento](#️-roadmap-de-desenvolvimento)
-* [📁 Estrutura de Diretórios](#-estrutura-de-diret%C3%B3rios)
-* [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
-* [👨‍💻 Autor & Créditos](#-autor--cr%C3%A9ditos)
+## Sumário
+* [Sobre o Projeto](#sobre-o-projeto)
+* [Origem e Evolução: Da Sala de Aula ao Mundo Real](#origem-e-evolu%C3%A7%C3%A3o-da-sala-de-aula-ao-mundo-real)
+* [Arquitetura de Dados de Ponta a Ponta](#arquitetura-de-dados-de-ponta-a-ponta)
+* [Estado Atual vs. Visão Futura](#estado-atual-vs-vis%C3%A3o-futura)
+* [Arquitetura Medallion no Databricks](#arquitetura-medallion-no-databricks)
+* [Ciência de Dados e Machine Learning](#ci%C3%AAncia-de-dados-e-machine-learning)
+* [Governança e Qualidade de Dados](#governan%C3%A7a-e-qualidade-de-dados)
+* [Roadmap de Desenvolvimento](#roadmap-de-desenvolvimento)
+* [Estrutura de Diretórios](#estrutura-de-diret%C3%B3rios)
+* [Como Executar o Projeto](#como-executar-o-projeto)
+* [Autor e Créditos](#autor-e-cr%C3%A9ditos)
 
 ---
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
-O **Pet Hotel Analytics & ML Platform** é uma plataforma moderna e completa de **Engenharia e Ciência de Dados** voltada para o setor de hotelaria e bem-estar animal.
+O **Pet Hotel Analytics & ML Platform** é uma plataforma de **Engenharia e Ciência de Dados** voltada para o setor de hotelaria e serviços para animais de estimação.
 
-O ecossistema integra desde o **banco de dados transacional (OLTP)** de um hotel para pets até um **Data Lakehouse distribuído** com orquestração automatizada, validação de qualidade de dados contínua e modelos preditivos de **Machine Learning** para tomada de decisão estratégica de negócio.
+O projeto integra o ciclo completo de dados, desde o **banco de dados transacional (OLTP)** operacional de um hotel para pets até um **Data Lakehouse distribuído** com orquestração automatizada de pipelines, validação contínua de qualidade de dados e modelos preditivos de **Machine Learning** para suporte à tomada de decisões estratégicas.
 
-### 🎯 Desafios de Negócio Endereçados:
-1. **Operação e Gestão**: Controle completo de cadastros, quartos, estadias, serviços veterinários/estética e faturamento.
-2. **Engenharia de Dados em Escala**: Ingestão contínua e processamento distribuído de dados históricos com garantia de integridade e linhagem.
-3. **Inteligência Preditiva**: Redução de perda de receita com previsão antecipada de cancelamentos de reservas (*no-show*) e análise de sazonalidade de ocupação.
+### Desafios de Negócio Endereçados:
+1. **Operação e Gestão**: Controle de cadastros, alocação de quartos, estadias, serviços veterinários, banho/tosa e faturamento.
+2. **Engenharia de Dados em Escala**: Ingestão contínua e processamento distribuído de dados históricos com garantia de integridade, rastreabilidade e linhagem.
+3. **Inteligência Preditiva**: Mitigação de perda de receita por meio de previsão antecipada de cancelamentos de reservas (*no-show*) e análise de demanda sazonal.
 
 ---
 
-## 🌱 Origem & Evolução: Da Sala de Aula ao Mundo Real
+## Origem e Evolução: Da Sala de Aula ao Mundo Real
 
 > *"Grandes projetos nascem de ideias sólidas e crescem através da visão e dedicação contínua."*
 
 Este projeto teve seu ponto de partida como um trabalho acadêmico em um curso de **Administração de Banco de Dados (DBA)**, desenvolvido originalmente em grupo por 4 alunos para entrega e avaliação curricular.
 
-A fundação do projeto — que inclui a modelagem conceitual (MER), criação dos esquemas relacionais normalizados em MySQL, regras de negócio e dicionário de dados — foi desenhada e estruturada pelo autor deste repositório como parte daquela entrega original.
+A fundação relacional do projeto — que inclui a modelagem conceitual (MER), criação dos esquemas normalizados em MySQL, regras de negócio e dicionário de dados — foi desenhada e estruturada pelo autor deste repositório como parte daquela entrega original.
 
-### 🚀 A Nova Fase: Construindo um Pipeline Enterprise
-Com o curso concluído com sucesso, o projeto foi desacoplado da sua versão acadêmica e assumido como um **projeto autoral contínuo de Engenharia e Ciência de Dados**. O objetivo nesta nova jornada é elevar a arquitetura ao padrão ouro de mercado (*production-ready*), incorporando as ferramentas e práticas mais modernas utilizadas por times de dados em escala global.
+### A Nova Fase: Construindo um Pipeline Enterprise
+Com o curso concluído, o projeto foi desacoplado da sua versão acadêmica e assumido como um **projeto autoral contínuo de Engenharia e Ciência de Dados**. O objetivo nesta etapa é elevar a arquitetura ao padrão de mercado (*production-ready*), incorporando ferramentas modernas e boas práticas de engenharia de software e dados.
 
 ---
 
-## 🏛️ Arquitetura de Dados de Ponta a Ponta
+## Arquitetura de Dados de Ponta a Ponta
 
-A arquitetura do projeto conecta o mundo transacional à inteligência preditiva através de um fluxo moderno e desacoplado:
+A arquitetura do projeto conecta o ambiente transacional à inteligência preditiva através de um fluxo desacoplado:
 
 ```mermaid
 flowchart TD
@@ -121,90 +121,90 @@ flowchart TD
 
 ---
 
-## 📊 Estado Atual vs. Visão Futura
+## Estado Atual vs. Visão Futura
 
 | Dimensão | Estado Atual (Legado DBA) | Nova Arquitetura (Em Construção) |
 | :--- | :--- | :--- |
 | **Foco Principal** | Banco de Dados Relacional e Consultas SQL | Pipeline de Dados End-to-End & Ciência de Dados |
-| **Banco Transacional** | MySQL com dados de teste manuais (poucas linhas) | MySQL populado por gerador sintético em larga escala |
-| **Ingestão** | Inexistente (manual via scripts SQL) | Scripts Python modulares e orquestrados |
-| **Processamento** | Queries locais pontuais | Processamento distribuído no Databricks com PySpark |
-| **Organização do Dado** | Tabelas relacionais 3FN | Arquitetura Medallion (Raw $\rightarrow$ Trusted $\rightarrow$ Refined) em Delta Lake |
-| **Qualidade de Dados** | Apenas `CHECK` e constraints SQL | Framework automatizado de Data Quality com alertas |
+| **Banco Transacional** | MySQL com dados de teste manuais | MySQL populado por gerador sintético em larga escala |
+| **Ingestão** | Inexistente (execução manual via SQL) | Scripts Python modulares e orquestrados |
+| **Processamento** | Consultas locais pontuais | Processamento distribuído no Databricks com PySpark |
+| **Organização do Dado** | Tabelas relacionais em 3FN | Arquitetura Medallion (Raw $\rightarrow$ Trusted $\rightarrow$ Refined) em Delta Lake |
+| **Qualidade de Dados** | Apenas constraints SQL (`CHECK`, `FK`) | Framework automatizado de Data Quality com logs e alertas |
 | **Orquestração** | Execução manual | DAGs automatizadas no Apache Airflow com monitoramento |
 | **Analytics & ML** | Nenhuma camada analítica | Modelo preditivo em `scikit-learn` para prevenção de *no-show* |
-| **Ambiente de Dev** | Instalação local avulsa | Ambiente conteinerizado com Docker Compose |
+| **Ambiente de Dev** | Instalação local direta | Ambiente conteinerizado com Docker Compose |
 
 ---
 
-## 🏅 Arquitetura Medallion no Databricks
+## Arquitetura Medallion no Databricks
 
-O processamento no Databricks com PySpark divide as responsabilidades em 3 camadas lógicas:
+O processamento distribuído no Databricks com PySpark divide as responsabilidades em três camadas:
 
-1. **🥉 Camada Raw (Bronze)**:
+1. **Camada Raw (Bronze)**:
    * Armazena os dados brutos exatamente como chegam da origem MySQL.
-   * Estrutura imutável (*append-only*) no formato Delta Lake, preservando histórico e incluindo metadados (`_ingested_at`, `_source_file`).
-2. **🥈 Camada Trusted (Silver)**:
-   * Aplica limpeza e padronização: tratamento de valores ausentes, correção de tipagem, remoção de duplicatas e conformidade com regras de negócio.
-   * Tabelas limpas representando entidades de negócio confiáveis.
-3. **🥇 Camada Refined (Gold)**:
-   * Dados altamente agregados e modelados em esquema dimensional (**Star Schema** / Kimball).
-   * Contém as tabelas **Fato** (`fato_reservas`, `fato_servicos`, `fato_pagamentos`) e **Dimensões** (`dim_cliente`, `dim_pet`, `dim_quarto`, `dim_tempo`, `dim_funcionario`), além de servir como **Feature Store** para os modelos de IA.
+   * Estrutura imutável (*append-only*) em Delta Lake, preservando o histórico completo e metadados de auditoria (`_ingested_at`, `_source_file`).
+2. **Camada Trusted (Silver)**:
+   * Aplica rotinas de limpeza e padronização: tratamento de valores ausentes, correção de tipagem, deduplicação e conformidade com regras de negócio.
+   * Tabelas limpas e estruturadas representando entidades de negócio consistentes.
+3. **Camada Refined (Gold)**:
+   * Dados agregados e organizados em modelagem dimensional (**Star Schema** / Kimball).
+   * Contém tabelas **Fato** (`fato_reservas`, `fato_servicos`, `fato_pagamentos`) e **Dimensões** (`dim_cliente`, `dim_pet`, `dim_quarto`, `dim_tempo`, `dim_funcionario`), além de servir como **Feature Store** para os modelos de Machine Learning.
 
 ---
 
-## 🤖 Ciência de Dados & Machine Learning
+## Ciência de Dados e Machine Learning
 
-### Caso de Uso: *Previsão de Cancelamento de Reservas (No-Show)*
-* **Problema**: O cancelamento tardio de reservas de quartos gera ociosidade inesperada, bloqueia clientes legítimos e reduz o faturamento do hotel.
-* **Solução**: Modelo preditivo desenvolvido com **scikit-learn** que classifica a probabilidade de cancelamento de uma reserva no momento em que ela é criada.
-* **Pipeline de ML**:
-  * **Feature Engineering**: Cálculo de antecedência da reserva (dias entre reserva e check-in), histórico de estadias anteriores do tutor, espécie/porte do pet, valor total contratado, proporção de serviços adicionais (banho/tosa/veterinário) e forma de pagamento.
-  * **Algoritmos**: Avaliação comparativa entre `RandomForestClassifier`, `HistGradientBoostingClassifier` e `LogisticRegression`.
-  * **Métricas de Sucesso**: Foco em **F1-Score** e **ROC-AUC** para lidar com classes desbalanceadas.
-  * **Inferência**: Geração periódica de *scores* de risco para que a equipe do hotel tome ações preventivas (confirmação por WhatsApp, solicitação de caução, etc.).
-
----
-
-## 🛡️ Governança & Data Quality
-
-A qualidade dos dados é tratada como requisito de primeira classe ao longo de todo o pipeline:
-* **Validação de Schemas**: Garantia de que alterações na estrutura de tabelas do MySQL não quebrem o pipeline silenciosamente.
-* **Regras de Integridade**: Verificações automáticas (ex: `data_saida > data_entrada`, `valor > 0`, unicidade de chaves, nulidade controlada).
-* **Bloqueio de Propagação**: Em caso de falha em validações críticas na camada Silver, o pipeline interrompe a publicação na Gold e notifica o time de dados.
+### Caso de Uso: Previsão de Cancelamento de Reservas (*No-Show*)
+* **Problema de Negócio**: O cancelamento tardio de reservas gera ociosidade nos quartos, impede o agendamento de outros clientes e causa perda de receita.
+* **Solução Proposta**: Modelo preditivo em **scikit-learn** para classificar o risco de cancelamento de uma reserva no momento da sua criação.
+* **Etapas do Pipeline de ML**:
+  * **Feature Engineering**: Cálculo de tempo de antecedência da reserva, frequência histórica de estadias do cliente, características do animal (porte/espécie), volume financeiro total e contratação de serviços adicionais.
+  * **Algoritmos Avaliados**: Comparação entre `RandomForestClassifier`, `HistGradientBoostingClassifier` e `LogisticRegression`.
+  * **Métricas de Avaliação**: Avaliação focada em **F1-Score** e **ROC-AUC** para tratamento de desbalanceamento de classes.
+  * **Inferência Operacional**: Geração periódica de *scores* de probabilidade de cancelamento para direcionar ações preventivas da equipe do hotel.
 
 ---
 
-## 🗺️ Roadmap de Desenvolvimento
+## Governança e Qualidade de Dados
 
-O projeto está estruturado em fases incrementais e bem definidas:
+A qualidade dos dados é validada em todas as etapas do ciclo de vida:
+* **Validação de Schemas**: Garantia de que alterações estruturais nas tabelas fonte não interrompam os pipelines de forma silenciosa.
+* **Regras de Integridade**: Checagens automáticas (exemplo: `data_saida > data_entrada`, `valor > 0`, unicidade de identificadores e limites de valores nulos).
+* **Controle de Propagação**: Em caso de falha crítica na camada Silver, o pipeline bloqueia a atualização da camada Gold e registra o incidente.
+
+---
+
+## Roadmap de Desenvolvimento
+
+O cronograma do projeto está organizado em fases modulares:
 
 ```
-[✅] Fase 1: Modelagem Relacional & Schemas MySQL
- │   ├── Criação das tabelas relacionais (3FN)
- │   ├── Dicionário de dados e documentação MER/DER
- │   └── Scripts de teste de integridade e consultas base
- │
-[⏳] Fase 2: Simulador de Dados & Infraestrutura Local
- │   ├── Criação de gerador de dados sintéticos em Python (Faker) com sazonalidade e histórico
- │   └── Configuração do ambiente conteinerizado (Docker Compose para Airflow e MySQL)
- │
+[x] Fase 1: Modelagem Relacional & Schemas MySQL
+ |   ├── Criação das tabelas relacionais (3FN)
+ |   ├── Dicionário de dados e documentação MER/DER
+ |   └── Scripts de teste de integridade e consultas base
+ |
+[ ] Fase 2: Simulador de Dados & Infraestrutura Local
+ |   ├── Criação de gerador de dados sintéticos em Python (Faker) com sazonalidade e histórico
+ |   └── Configuração do ambiente conteinerizado (Docker Compose para Airflow e MySQL)
+ |
 [ ] Fase 3: Ingestão de Dados & Camada Raw (Bronze)
- │   ├── Módulo Python de extração do MySQL (Full & Incremental)
- │   └── Persistência no formato Delta Lake / Parquet com metadados
- │
+ |   ├── Módulo Python de extração do MySQL (Full & Incremental)
+ |   └── Persistência no formato Delta Lake / Parquet com metadados
+ |
 [ ] Fase 4: Processamento Distribuído no Databricks (PySpark)
- │   ├── Pipeline Raw -> Trusted (Silver): limpeza e conformidade
- │   └── Pipeline Trusted -> Refined (Gold): modelagem dimensional (Star Schema)
- │
+ |   ├── Pipeline Raw -> Trusted (Silver): limpeza e conformidade
+ |   └── Pipeline Trusted -> Refined (Gold): modelagem dimensional (Star Schema)
+ |
 [ ] Fase 5: Validação Automatizada de Qualidade (Data Quality)
- │   └── Implementação de suítes de validação de schemas, nulos e limites de negócio
- │
+ |   └── Implementação de suítes de validação de schemas, nulos e limites de negócio
+ |
 [ ] Fase 6: Pipeline de Machine Learning (scikit-learn)
- │   ├── Feature Store e pipeline de pré-processamento
- │   ├── Treinamento e tuning do modelo de previsão de cancelamento
- │   └── Exportação e rotina de inferência preditiva em lote
- │
+ |   ├── Feature Store e pipeline de pré-processamento
+ |   ├── Treinamento e tuning do modelo de previsão de cancelamento
+ |   └── Exportação e rotina de inferência preditiva em lote
+ |
 [ ] Fase 7: Orquestração com Apache Airflow & Dashboards
      ├── Construção das DAGs de orquestração end-to-end com monitoramento
      └── Dashboard analítico com métricas de negócio e predições
@@ -212,7 +212,7 @@ O projeto está estruturado em fases incrementais e bem definidas:
 
 ---
 
-## 📁 Estrutura de Diretórios
+## Estrutura de Diretórios
 
 ```text
 hotel-pet-analytics/
@@ -265,15 +265,15 @@ hotel-pet-analytics/
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Pré-requisitos
 * **MySQL 8.0+** (ou Docker instalado)
 * **Python 3.10+**
-* Cliente SQL (MySQL Workbench, DBeaver ou VS Code Database Client)
+* Cliente SQL (MySQL Workbench, DBeaver ou extensão de banco de dados)
 
 ### 1. Inicializando o Banco de Dados Relacional
-Para criar o banco de dados e as tabelas com as regras de negócio:
+Para criar o banco de dados e as tabelas com as regras de integridade:
 ```bash
 # Conecte-se ao seu servidor MySQL e execute os scripts na ordem:
 mysql -u seu_usuario -p < database/01_create_database.sql
@@ -282,20 +282,20 @@ mysql -u seu_usuario -p hotel_pet < database/03_insert_sample_data.sql
 ```
 
 ### 2. Validando as Consultas Operacionais
-Execute o script de teste para simular o fluxo de reserva, serviço e pagamento:
+Execute o script de teste para simular o fluxo transacional de reserva, serviço e pagamento:
 ```bash
 mysql -u seu_usuario -p hotel_pet < database/04_test_reserva.sql
 ```
 
-*(Instruções para inicialização do Docker Compose, Apache Airflow e Jobs Databricks serão adicionadas conforme o avanço das próximas fases do Roadmap).*
+*(Instruções para inicialização dos contêineres Docker, Apache Airflow e execução dos jobs no Databricks serão incorporadas conforme o avanço das próximas fases).*
 
 ---
 
-## 👨‍💻 Autor & Créditos
+## Autor e Créditos
 
-Este projeto é desenvolvido e mantido por **Thiago** como iniciativa de portfólio avançado em Engenharia e Ciência de Dados.
+Este projeto é desenvolvido e mantido por **Thiago** como projeto de portfólio em Engenharia e Ciência de Dados.
 
-> **Reconhecimento Acadêmico**: A estrutura inicial do banco de dados relacional (esquema transacional) foi desenvolvida colaborativamente durante o curso de Administrador de Banco de Dados com os colegas de turma, servindo de base sólida para esta expansão analítica.
+> **Reconhecimento Acadêmico**: A estrutura inicial do banco de dados relacional (esquema transacional) foi desenvolvida colaborativamente durante o curso de Administrador de Banco de Dados com colegas de turma, servindo de base para esta expansão analítica.
 
 <p align="center">
   <i>"Tudo quanto fizerem, façam de todo o coração, como para o Senhor, e não para homens." – Colossenses 3:23</i>
@@ -303,7 +303,6 @@ Este projeto é desenvolvido e mantido por **Thiago** como iniciativa de portfó
 
 ---
 
-## 📜 Licença
+## Licença
 
-Este projeto é distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE.md](LICENSE.md) para obter mais detalhes.
-
+Este projeto é distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE.md](LICENSE.md) para mais informações.
