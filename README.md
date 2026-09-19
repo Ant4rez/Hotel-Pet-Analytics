@@ -175,6 +175,23 @@ A qualidade dos dados é validada em todas as etapas do ciclo de vida:
 
 ---
 
+## Métricas planejadas e status atual
+
+| Métrica | Estado atual | Meta do projeto |
+|---|---|---|
+| Tabelas relacionais MySQL (Fase 1 ✅) | 15+ tabelas em 3FN | — |
+| Dicionário de dados | Documentado (`docs/Dicionario.md`) | — |
+| Volume simulado de reservas (planejado) | — | ~100 mil por ano de operação |
+| Tempo de execução da DAG Medallion (planejado) | — | < 5 minutos end-to-end |
+| Taxa alvo de aprovação Data Quality | — | ≥ 95% |
+| Métricas alvo do modelo preditivo | — | F1-Score ≥ 0.75; ROC-AUC ≥ 0.80 |
+| Frequência de treino do modelo | — | Semanal (via DAG dedicada) |
+| Frequência de inferência batch | — | Diária |
+
+> As métricas de produção serão atualizadas conforme cada fase do roadmap for concluída.
+
+---
+
 ## Roadmap de Desenvolvimento
 
 O cronograma do projeto está organizado em fases modulares:
@@ -306,3 +323,13 @@ Este projeto é desenvolvido e mantido por **Thiago** como projeto de portfólio
 ## Licença
 
 Este projeto é distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE.md](LICENSE.md) para mais informações.
+
+---
+
+## Autor
+
+**Thiago Fiel de Oliveira**
+Cursando Tecnólogo em Ciência de Dados na FIAP · AWS Certified AI Practitioner
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiagofieldeoliveira/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Ant4rez)
