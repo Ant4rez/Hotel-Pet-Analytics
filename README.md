@@ -119,6 +119,18 @@ flowchart TD
     INFER --> ALERTS
 ```
 
+### Estado atual e arquitetura-alvo
+
+O diagrama abaixo separa o que já está implementado no repositório (modelagem MySQL e gerador de dados sintéticos) do que está planejado nas próximas fases do roadmap.
+
+<div align="center">
+
+![Arquitetura do Hotel Pet Analytics: estado atual e arquitetura-alvo](docs/arquitetura.png)
+
+</div>
+
+> Gerado por código em [`docs/diagrama/`](docs/diagrama/) com os ícones oficiais do pacote `diagrams`. Para atualizar: `pip install diagrams pillow cairosvg` e `python docs/diagrama/gerar_arquitetura.py`.
+
 ---
 
 ## Estado Atual vs. Visão Futura
@@ -126,7 +138,7 @@ flowchart TD
 | Dimensão | Estado Atual (Legado DBA) | Nova Arquitetura (Em Construção) |
 | :--- | :--- | :--- |
 | **Foco Principal** | Banco de Dados Relacional e Consultas SQL | Pipeline de Dados End-to-End & Ciência de Dados |
-| **Banco Transacional** | MySQL com dados de teste manuais | MySQL populado por gerador sintético em larga escala |
+| **Banco Transacional** | MySQL com dados de exemplo e gerador sintético (2.500 reservas) | MySQL populado por gerador sintético em larga escala |
 | **Ingestão** | Inexistente (execução manual via SQL) | Scripts Python modulares e orquestrados |
 | **Processamento** | Consultas locais pontuais | Processamento distribuído no Databricks com PySpark |
 | **Organização do Dado** | Tabelas relacionais em 3FN | Arquitetura Medallion (Raw $\rightarrow$ Trusted $\rightarrow$ Refined) em Delta Lake |
@@ -179,9 +191,9 @@ A qualidade dos dados é validada em todas as etapas do ciclo de vida:
 
 | Métrica | Estado atual | Meta do projeto |
 |---|---|---|
-| Tabelas relacionais MySQL (Fase 1 ✅) | 15+ tabelas em 3FN | — |
+| Tabelas relacionais MySQL (Fase 1 ✅) | 9 tabelas em 3FN, 8 chaves estrangeiras | — |
 | Dicionário de dados | Documentado (`docs/Dicionario.md`) | — |
-| Volume simulado de reservas (planejado) | — | ~100 mil por ano de operação |
+| Volume simulado de reservas | 2.500 reservas (jan/2024 a jun/2025), seed 42 | ampliar a escala conforme o pipeline evoluir |
 | Tempo de execução da DAG Medallion (planejado) | — | < 5 minutos end-to-end |
 | Taxa alvo de aprovação Data Quality | — | ≥ 95% |
 | Métricas alvo do modelo preditivo | — | F1-Score ≥ 0.75; ROC-AUC ≥ 0.80 |
@@ -202,9 +214,9 @@ O cronograma do projeto está organizado em fases modulares:
  |   ├── Dicionário de dados e documentação MER/DER
  |   └── Scripts de teste de integridade e consultas base
  |
-[ ] Fase 2: Simulador de Dados & Infraestrutura Local
- |   ├── Criação de gerador de dados sintéticos em Python (Faker) com sazonalidade e histórico
- |   └── Configuração do ambiente conteinerizado (Docker Compose para Airflow e MySQL)
+[~] Fase 2: Simulador de Dados & Infraestrutura Local (em andamento)
+ |   ├── [x] Gerador de dados sintéticos em Python (Faker) com sazonalidade e risco de cancelamento
+ |   └── [ ] Configuração do ambiente conteinerizado (Docker Compose para Airflow e MySQL)
  |
 [ ] Fase 3: Ingestão de Dados & Camada Raw (Bronze)
  |   ├── Módulo Python de extração do MySQL (Full & Incremental)
@@ -231,50 +243,35 @@ O cronograma do projeto está organizado em fases modulares:
 
 ## Estrutura de Diretórios
 
+Arquivos marcados com `(planejado)` fazem parte do roadmap e ainda não existem; as pastas correspondentes já estão criadas.
+
 ```text
 hotel-pet-analytics/
 ├── .github/
-│   └── workflows/              # Pipelines de CI/CD (lint, testes)
-├── config/                     # Configurações de conexão e parâmetros
-│   ├── airflow.cfg
-│   └── pipeline_config.yaml
-├── dags/                       # Definição das DAGs do Apache Airflow
-│   ├── dag_medallion_pipeline.py
-│   └── dag_ml_predictive_pipeline.py
-├── data_generator/             # Simulador de dados sintéticos em larga escala
+│   └── workflows/              # Pipelines de CI/CD: lint e testes (planejado)
+├── config/                     # Configurações de conexão e parâmetros (planejado)
+├── dags/                       # DAGs do Apache Airflow (planejado)
+├── data_generator/             # Simulador de dados sintéticos
 │   └── generate_synthetic_data.py
 ├── database/                   # Modelagem e scripts SQL relacionais (MySQL)
 │   ├── 01_create_database.sql
 │   ├── 02_create_tables.sql
 │   ├── 03_insert_sample_data.sql
-│   └── 04_test_reserva.sql
-├── docker/                     # Docker Compose e Dockerfiles
-│   ├── docker-compose.yml
-│   └── Dockerfile.airflow
+│   └── 04_test_reserva.sql     # 05_insert_synthetic_data.sql é gerado pelo simulador
+├── docker/                     # Docker Compose e Dockerfiles (planejado)
 ├── docs/                       # Documentação técnica, dicionário e diagramas
 │   ├── Dicionario.md
 │   ├── MER.png
-│   └── Requisitos.md
-├── src/                        # Código-fonte dos módulos da aplicação
-│   ├── ingestion/              # Conectores e extração MySQL -> Raw
-│   │   ├── __init__.py
-│   │   └── mysql_extractor.py
-│   ├── pyspark_jobs/           # Jobs distribuídos do Databricks / Spark
-│   │   ├── raw_to_trusted.py
-│   │   └── trusted_to_refined.py
-│   ├── quality/                # Suíte de Data Quality e validações
-│   │   ├── __init__.py
-│   │   └── data_validator.py
-│   └── ml/                     # Módulo de Ciência de Dados & Modelagem
-│       ├── __init__.py
-│       ├── features.py
-│       ├── train.py
-│       ├── evaluate.py
-│       └── predict.py
-├── tests/                      # Testes unitários e de integração (pytest)
-│   ├── test_ingestion.py
-│   ├── test_pyspark_jobs.py
-│   └── test_ml_pipeline.py
+│   ├── Requisitos.md
+│   ├── arquitetura.png
+│   └── diagrama/               # Gerador do diagrama de arquitetura
+├── src/                        # Módulos da aplicação (estrutura criada, código planejado)
+│   ├── ingestion/              # Extração MySQL -> Raw
+│   ├── pyspark_jobs/           # Jobs Raw -> Trusted -> Refined
+│   ├── quality/                # Validações de Data Quality
+│   └── ml/                     # Features, treino, avaliação e predição
+├── tests/                      # Testes unitários e de integração (planejado)
+├── .env.example                # Modelo de variáveis de ambiente
 ├── requirements.txt            # Dependências Python
 ├── LICENSE.md                  # Termos de licença MIT
 └── README.md                   # Documentação principal
